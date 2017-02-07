@@ -22,20 +22,34 @@ function isEven(aNumber){
   }
 }
 
-
-function isEvenProcedural(aNumber) {
-  if(aNumber % 2 === 0){
+function isOdd(aNumber) {
+  if(aNumber === 0){ //if zero it is even
+    return false;
+  }else if(aNumber === 1){ //one it is odd
     return true;
   }else{
-    return false;
+    // take away two from aNumber
+    // if odd it will hit 1 first
+    // if even it will hit 0 first
+    return isOdd(aNumber - 2);
   }
 }
 
-console.log('starting recursion version');
+function isEvenProcedural(aNumber) {
+  return (aNumber % 2 === 0) ? true : false;
+}
+
+console.log('starting isEven recursive version');
 console.log(isEven(0)); //true
 console.log(isEven(1)); //false
 console.log(isEven(3)); //false
 console.log(isEven(6)); //true
+
+console.log('starting isOdd recursive version');
+console.log(isOdd(0)); //false
+console.log(isOdd(1)); //true
+console.log(isOdd(3)); //true
+console.log(isOdd(6)); //false
 
 console.log('starting procedural version');
 console.log(isEvenProcedural(0)); //true
