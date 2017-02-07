@@ -1,3 +1,10 @@
+/*
+  Write two functions: is_even and is_odd.
+  Both take a natural number (integer >= 0).
+  is_even(n) returns true if n is even and false if odd.
+  is_odd(n) returns true is n is odd and false if it is even.
+*/
+
 // two basecases:
 // 1. == 0 is even
 // 2. == 1 is odd
